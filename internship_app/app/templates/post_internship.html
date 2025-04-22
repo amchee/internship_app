@@ -1,0 +1,36 @@
+<h2>Post Internship</h2>
+<form method="post">
+  {{ form.hidden_tag() }}
+  
+  <label for="title">Title:</label>
+  {{ form.title(class="form-control") }}<br>
+  {% if form.title.errors %}
+    <ul class="errors">
+      {% for error in form.title.errors %}
+        <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+  <label for="company">Company:</label>
+  {{ form.company(class="form-control") }}<br>
+  {% if form.company.errors %}
+    <ul class="errors">
+      {% for error in form.company.errors %}
+        <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+  <label for="description">Description:</label><br>
+  {{ form.description(class="form-control", rows=5) }}<br>
+  {% if form.description.errors %}
+    <ul class="errors">
+      {% for error in form.description.errors %}
+        <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+  <button type="submit">Post</button>
+</form>

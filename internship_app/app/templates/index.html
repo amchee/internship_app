@@ -1,0 +1,10 @@
+<h1>Available Internships</h1>
+<a href="{{ url_for('main.post_internship') }}">Post Internship</a>
+<ul>
+  {% for internship in internships %}
+    <li>
+      <strong>{{ internship.title }}</strong> at {{ internship.company }}<br>
+      <a href="{{ url_for('main.apply', internship_id=internship.id) }}">Apply</a>
+    </li>
+  {% endfor %}
+</ul>
