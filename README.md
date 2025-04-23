@@ -1,4 +1,4 @@
-# 🚀 **Comprehensive Report - Testing Internship Web App** 🚀
+# 🚀 **Comprehensive Report - Internship Web App** 🚀
 
 ## 📝 **Project Overview**
 
